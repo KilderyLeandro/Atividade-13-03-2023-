@@ -1,0 +1,137 @@
+# Tipos de Dados.
+
+# 1: Escreva um programa que solicite ao usuário um número inteiro e imprima o dobro desse número.
+
+# numero = input("Digite um número")
+# multiplicacao = 2
+# multiplicacao = multiplicacao * (float(numero))
+
+# print(multiplicacao)
+
+
+# 2: Escreva um programa que solicite ao usuário 
+# seu nome e idade e imprima uma mensagem personalizada com essas informações.
+
+# nome = input("Digite um nome:")
+# print("Seja bem-vindo", nome)
+
+# idade = input("Digite sua idade") 
+# print("Sua idade é",idade )
+
+
+# ------------------------------------------------------
+# Coleções
+
+# 1: Escreva um programa que leia uma lista de números inteiros e imprima o maior e o menor número da lista.
+
+# lista = [10, 20, 30, 40, 50]
+# print(min(lista))
+# print(max(lista))
+
+# 2: Escreva um programa que leia uma lista de números 
+# 	 inteiros e remova todos os valores duplicados. Em seguida, imprima a lista sem os valores duplicados.
+
+# lista = [10, 20, 20, 30, 30, 40, 40, 50]
+# lista.remove
+# print(lista)
+
+#--------------------------------------------------------------------------
+# Estruturas Condicionais
+
+# 1: Escreva um programa que leia o nome e a idade de uma pessoa e imprima uma mensagem personalizada com base na idade. 
+#    Se a idade for menor que 18 anos, imprima "Você é menor de idade". Se a idade estiver entre 18 e 65 anos, 
+#    imprima "Você é adulto". Caso contrário, imprima "Você é idoso".
+
+# nome = input("Digite seu nome:")
+# idade = int(input('Digite sua idade: '))
+
+# if idade >= 0 and idade < 18:
+# 	print('Você é menor de idade')
+# elif idade >= 19 and idade < 65:
+# 	print('Você é adulto')
+# elif idade >= 66 and idade <= 100:
+# 	print('Você é idoso')
+# else: 
+# 	print('Valor não encontrado!')
+
+
+# 2: Escreva um programa que solicite ao usuário a nota de um aluno em uma prova e imprima a mensagem "Aprovado" 
+# 	 se a nota for maior ou igual a 7, "Reprovado" se a nota for menor que 5 e "Recuperação" 
+# 	 se a nota estiver entre 5 e 7.
+
+
+# idade = int(input('Digite sua nota: '))
+
+# if idade >= 7 and idade < 11:
+# 	print('Aprovado')
+# elif idade >= 5 and idade < 6:
+# 	print('Recuperação')
+# elif idade >= 0 and idade <= 4:
+# 	print('Reprovado')
+# else: 
+# 	print('Valor não encontrado!')
+
+#-------------------------------------------
+# Estruturas de Repetição
+
+# 1: Escreva um programa que imprima todos os números ímpares entre 1 e 50.
+
+
+# numero = int(input("Digite um número inteiro:"))
+
+# ehPrimo = True
+
+# for i in range(2,numero):
+
+# 	if numero % i == 0:
+# 	   ehPrimo = False
+
+# if ehPrimo:
+# 	print("É primo")
+# else:
+# 	print("Não é primo")
+
+
+# 2: Escreva um programa que solicite ao usuário um número e imprima a tabuada desse número até o valor 10
+
+
+
+#-----------------------------------------------------------------
+# Funções:
+# 1: Escreva uma função que receba uma lista de números inteiros e retorne o maior número da lista.
+# def main():
+#     num = [10,20,30,40,50,60,70,80]
+#     print(max(num))
+
+# main()
+    
+#2: Escreva uma função que receba uma lista de números inteiros e retorne a soma dos números pares da lista.
+  
+
+
+#----------------------------------------------------------------------------
+#Escopo de Funções:
+
+#1: Escreva um programa que solicite ao usuário um número e imprima se esse número é par ou ímpar. 
+# 	Crie uma função para determinar se um número é par e outra função para determinar se um número é ímpar.
+
+numero = int(input("Digite um número inteiro:"))
+
+
+def primo(num):
+	num = True
+
+	for i in range(2,numero):
+
+		if numero % i == 0:
+			num = False
+
+	if num:
+		print("É primo")
+	else:
+		print("Não é primo")
+
+print(primo)
+
+#3: Escreva um programa que solicite ao usuário um número e imprima se esse número é par ou ímpar. 
+# 	Crie uma função para determinar se um número é par e outra função para determinar se um número é ímpar.
