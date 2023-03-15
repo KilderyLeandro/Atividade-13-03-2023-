@@ -1,0 +1,226 @@
+ Escopo de Funções:
+
+
+# 1. Escreva um programa que solicite ao usuário dois números e imprima a soma, a
+# subtração, a multiplicação e a divisão desses números. Crie funções separadas para
+# cada operação matemática.
+
+def soma(a, b):
+    return a + b
+
+def subtracao(a, b):
+    return a - b
+
+def multiplicacao(a, b):
+    return a * b
+
+def divisao(a, b):
+    return a / b
+
+# Solicita os números ao usuário
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+
+# Realiza as operações matemáticas
+resultado_soma = soma(num1, num2)
+resultado_subtracao = subtracao(num1, num2)
+resultado_multiplicacao = multiplicacao(num1, num2)
+resultado_divisao = divisao(num1, num2)
+
+# Imprime os resultados
+print("Soma: ", resultado_soma)
+print("Subtração: ", resultado_subtracao)
+print("Multiplicação: ", resultado_multiplicacao)
+print("Divisão: ", resultado_divisao)
+
+
+# Ao executar o programa, será solicitado ao usuário que digite dois números. 
+# Em seguida, serão realizadas as operações matemáticas e os resultados serão impressos na tela.
+
+# 2. Escreva um programa que solicite ao usuário um número e imprima se esse número
+# é par ou ímpar. Crie uma função para determinar se um número é par e outra função
+# para determinar se um número é ímpar.
+
+def is_par(num):
+    return num % 2 == 0
+
+def is_impar(num):
+    return not is_par(num)
+
+# Exemplo de uso
+numero = int(input("Digite um número: "))
+
+if is_par(numero):
+    print(numero, "é par")
+else:
+    print(numero, "é ímpar")
+
+
+# Ao executar o código acima, o programa solicitará ao usuário um número e informará se ele é par ou ímpar.
+
+
+# 3. Escreva uma função que receba uma lista de números inteiros como parâmetro e
+# retorne a média dos números. A função deve verificar se a lista está vazia e retornar
+# None caso esteja. Em seguida, utilize uma variável global para contar quantas vezes
+# a função foi chamada e imprimir o valor da contagem ao final de cada chamada.
+
+contador = 0
+
+def calcular_media(lista):
+    global contador
+    if not lista:
+        return None
+    soma = sum(lista)
+    media = soma / len(lista)
+    contador += 1
+    print(f"A função foi chamada {contador} vezes.")
+    return media
+
+
+# Explicando a implementação, primeiramente definimos a variável global contador com valor inicial zero. Em seguida, definimos a função calcular_media que recebe como parâmetro uma lista de números inteiros.
+# Dentro da função, a primeira verificação que é feita é para checar se a lista está vazia. Caso esteja, a função retorna None. Caso contrário, a soma dos elementos da lista é calculada usando a função sum,
+#  e a média é obtida dividindo a soma pelo comprimento da lista.
+# Em seguida, incrementamos a variável contador em 1 e imprimimos a mensagem indicando quantas vezes a função foi chamada. Por fim, retornamos o valor da média.
+# Note que a variável contador é definida fora da função e usada dentro dela, para contar quantas vezes a função foi chamada. Como ela é global, seu valor é mantido entre as chamadas da função.
+# Para testar a função, podemos criar uma lista de números inteiros e chamar a função algumas vezes, imprimindo o resultado e a mensagem com a contagem:
+
+lista_numeros = [1, 2, 3, 4, 5]
+print(f"Média: {calcular_media(lista_numeros)}")
+print(f"Média: {calcular_media([])}")
+print(f"Média: {calcular_media(lista_numeros)}")
+
+# A saída esperada seria:
+
+# A função foi chamada 1 vezes.
+# Média: 3.0
+# A função foi chamada 2 vezes.
+# Média: None
+# A função foi chamada 3 vezes.
+# Média: 3.0
+
+
+
+# 4. Escreva uma função que calcule o fatorial de um número inteiro n. A função deve
+# utilizar uma variável local para armazenar o resultado e uma estrutura de repetição
+# para calcular o fatorial. Em seguida, utilize uma variável global para contar quantas
+# vezes a função foi chamada e imprimir o valor da contagem ao final de cada
+# chamada.
+
+count = 0
+
+def calcular_fatorial(n):
+    global count
+    count += 1
+    if n < 0:
+        return None
+    elif n == 0:
+        return 1
+    else:
+        fat = 1
+        for i in range(1, n+1):
+            fat *= i
+        return fat
+
+
+# Explicação do código:
+
+# A variável count é definida fora da função e é inicializada com o valor 0.
+# A função calcular_fatorial(n) recebe como parâmetro um número inteiro n.
+# A linha global count é utilizada para indicar que a variável count que será utilizada na função é a mesma que foi definida fora dela.
+# A linha count += 1 é utilizada para incrementar o valor da variável count a cada vez que a função é chamada.
+# A primeira verificação é se o número n é negativo. Se for, a função retorna None.
+# A segunda verificação é se o número n é igual a zero. Se for, a função retorna 1.
+# Caso contrário, a variável fat é inicializada com o valor 1.
+# A estrutura de repetição for é utilizada para calcular o fatorial de n.
+# Ao final da função, é retornado o valor da variável fat.
+
+# Exemplo de uso da função:
+
+print(calcular_fatorial(5)) # Saída: 120
+print(calcular_fatorial(10)) # Saída: 3628800
+print(calcular_fatorial(-3)) # Saída: None
+print(count) # Saída: 3
+
+# Na primeira e segunda chamada da função, é retornado o fatorial de 5 e 10, respectivamente.
+# Na terceira chamada, como o número passado como parâmetro é negativo, a função retorna None. 
+# E na última linha do exemplo, é impresso o valor da variável count, que indica quantas vezes a função foi chamada.
+
+
+
+# 5. Escreva uma função que receba uma lista de strings como parâmetro e retorne a
+# string com o maior número de caracteres. A função deve utilizar uma variável local
+# para armazenar a string com o maior número de caracteres e uma estrutura de
+# repetição para percorrer a lista. Em seguida, utilize uma variável global para contar
+# quantas vezes a função foi chamada e imprimir o valor da contagem ao final de cada
+# chamada.
+
+count = 0  # variável global para contar o número de chamadas da função
+
+def maior_string(lista):
+    global count
+    count += 1
+    
+    if not lista:  # verifica se a lista está vazia
+        return None
+    
+    maior = lista[0]  # inicia a maior string como a primeira da lista
+    
+    for s in lista:
+        if len(s) > len(maior):
+            maior = s
+    
+    return maior
+
+
+# Explicação da função:
+
+# Inicia a variável global count como 0.
+# Define a função maior_string que recebe uma lista de strings como parâmetro.
+# A variável global count é incrementada em cada chamada da função.
+# Se a lista estiver vazia, a função retorna None.
+# Caso contrário, a variável maior é inicializada como a primeira string da lista.
+# Em seguida, é percorrida a lista com um laço for, comparando o tamanho de cada string com o tamanho da maior string encontrada até o momento. Se o tamanho da string atual for maior, a variável maior é atualizada com essa string.
+# Ao final, a função retorna a maior string encontrada.
+# Após cada chamada da função, o valor da variável global count é impresso.
+
+# 6. Escreva uma função que receba um número inteiro como parâmetro e retorne True
+# se o número for primo e False caso contrário. A função deve utilizar uma variável
+# local para armazenar o resultado e uma estrutura de repetição para verificar se o
+# número é divisível por outro número. Em seguida, utilize uma variável global para
+# contar quantas vezes a função foi chamada e imprimir o valor da contagem ao final
+# de cada chamada
+
+count = 0
+
+def is_prime(n):
+    global count
+    count += 1
+    
+    if n <= 1:
+        return False
+    
+    for i in range(2, int(n**(0.5))+1):
+        if n % i == 0:
+            return False
+    
+    return True
+
+
+# A função is_prime recebe um número inteiro n como parâmetro e retorna True se o número for primo e False caso contrário. 
+# A função utiliza uma variável local chamada count para armazenar o número de vezes que foi chamada. A cada chamada da função, a variável count é incrementada em 1.
+# A função começa verificando se o número é menor ou igual a 1, pois nesse caso ele não pode ser considerado primo. Em seguida, 
+# a função percorre todos os números inteiros de 2 até a raiz quadrada de n, verificando se n é divisível por algum desses números. 
+# Se n for divisível por algum número nesse intervalo, então ele não é primo e a função retorna False. Caso contrário, n é primo e a função retorna True.
+# Para acessar a variável global count dentro da função, utilizamos a palavra-chave global seguida do nome da variável. Dessa forma, podemos incrementar o valor da variável count a cada chamada da função.
+# Para testar a função, podemos chamá-la com alguns números e imprimir o resultado, assim como o valor da variável count. Por exemplo:
+
+print(is_prime(7))  # True
+print(count)  # 1
+
+print(is_prime(20))  # False
+print(count)  # 2
+
+
+# No exemplo acima, a primeira chamada da função is_prime passa o número 7 como parâmetro, que é um número primo. 
+# A função retorna True e o valor da variável global count é impresso, que é igual a 1. Na segunda chamada da função, passamos o número 20 como parâmetro, que não é primo. 
+# A função retorna False e o valor da variável global count é impresso, que agora é igual a 2.
