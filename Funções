@@ -1,0 +1,69 @@
+# Funções:
+# 1. Escreva uma função que receba uma lista de números inteiros e retorne o maior
+# número da lista.
+
+def maior_numero(lista):
+    maior = lista[0] # definimos o primeiro elemento como o maior
+    for num in lista:
+        if num > maior: # se o número atual for maior que o maior número encontrado até agora
+            maior = num # atualizamos o maior número
+    return maior
+
+
+# Explicando o código: a função maior_numero recebe como parâmetro uma lista de números inteiros. 
+# Em seguida, definimos a variável maior como o primeiro elemento da lista. Depois, percorremos a lista com um loop for e, 
+# para cada número da lista, verificamos se ele é maior que o maior número encontrado até o momento. 
+# Se for, atualizamos o valor da variável maior. Por fim, retornamos o valor de maior.
+
+
+# 2. Escreva uma função que receba uma lista de palavras e retorne uma lista contendo
+# apenas as palavras que começam com a letra "a".
+
+# Para escrever essa função em Python, podemos usar uma compreensão de lista. 
+# A função receberá uma lista de palavras e irá retornar uma nova lista contendo apenas as palavras que começam com a letra "a". 
+# Aqui está um exemplo de como essa função pode ser implementada:
+
+def palavras_comecam_com_a(lista):
+    return [palavra for palavra in lista if palavra.startswith("a")]
+
+
+# Explicando o código: a função palavras_comecam_com_a recebe uma lista de palavras como parâmetro. 
+# Em seguida, usamos uma compreensão de lista para iterar sobre a lista original e filtrar apenas as palavras que começam com a letra "a",
+# usando o método startswith(). Por fim, a função retorna a lista filtrada contendo apenas as palavras que começam com "a".
+
+
+# 3. Escreva uma função que receba uma lista de números inteiros e retorne a soma dos
+# números pares da lista.
+
+# Para implementar essa função em Python, podemos usar um loop for para iterar sobre a lista de números e adicionar apenas os números pares a uma variável de soma. 
+# Aqui está um exemplo de como essa função pode ser implementada:
+
+def soma_pares(lista):
+    soma = 0
+    for numero in lista:
+        if numero % 2 == 0:
+            soma += numero
+    return soma
+
+
+# Explicando o código: a função soma_pares recebe uma lista de números como parâmetro e inicializa uma variável soma como zero. 
+# Em seguida, usamos um loop for para iterar sobre a lista e verificar se cada número é par usando o operador % (módulo). 
+# Se o número for par, adicionamos seu valor à variável soma. No final, a função retorna o valor da variável soma, que é a soma dos números pares na lista.
+
+
+# 4. Escreva uma função que receba uma lista de dicionários contendo informações
+# sobre pessoas (nome, idade, cidade) e retorne uma lista contendo apenas os nomes
+# das pessoas que moram em uma cidade específica.
+
+def buscar_pessoas_por_cidade(pessoas, cidade):
+    nomes = []
+    for pessoa in pessoas:
+        if pessoa["cidade"] == cidade:
+            nomes.append(pessoa["nome"])
+    return nomes
+
+
+# A função recebe dois parâmetros: a lista de dicionários pessoas e a cidade a ser buscada cidade. 
+# A variável nomes é inicializada como uma lista vazia. 
+# A função percorre a lista pessoas com um laço for, verificando se a cidade da pessoa atual é igual à cidade informada. 
+# Se for, o nome da pessoa é adicionado à lista nomes. Por fim, a função retorna a lista nomes.
