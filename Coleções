@@ -1,0 +1,66 @@
+# Coleções:
+
+# 1. Escreva um programa que leia uma lista de números inteiros e imprima o maior e o
+# menor número da lista.
+
+numeros = input("Digite uma lista de números inteiros separados por espaço: ")
+numeros = numeros.split() # converte a entrada em uma lista de strings
+numeros = [int(numero) for numero in numeros] # converte cada elemento da lista para um número inteiro
+
+maior = max(numeros)
+menor = min(numeros)
+
+print("O maior número da lista é:", maior)
+print("O menor número da lista é:", menor)
+
+# Neste programa, a função input() é utilizada para solicitar ao usuário que digite uma lista de números inteiros separados por espaço. 
+# Em seguida, a função split() é utilizada para converter a entrada em uma lista de strings, separando os elementos pelos espaços em branco.
+# A lista resultante é armazenada na variável numeros.
+# Para calcular o maior e o menor número da lista, utilizamos as funções max() e min(), que retornam o maior e o menor elemento de uma lista, respectivamente. 
+# Esses valores são armazenados nas variáveis maior e menor.
+# Por fim, as funções print() são utilizadas para imprimir as mensagens com o maior e o menor número da lista.
+
+
+# 2. Escreva um programa que leia uma lista de nomes e crie um dicionário onde a
+# chave é o nome e o valor é o número de vezes que o nome aparece na lista.
+
+nomes = input("Digite uma lista de nomes separados por espaço: ")
+nomes = nomes.split() # converte a entrada em uma lista de strings
+
+dicionario = {}
+
+for nome in nomes:
+    if nome in dicionario:
+        dicionario[nome] += 1
+    else:
+        dicionario[nome] = 1
+
+print(dicionario)
+
+# Neste programa, a função input() é utilizada para solicitar ao usuário que digite uma lista de nomes separados por espaço. 
+# Em seguida, a função split() é utilizada para converter a entrada em uma lista de strings, separando os elementos pelos espaços em branco. 
+# A lista resultante é armazenada na variável nomes.
+# Em seguida, criamos um dicionário vazio na variável dicionario.
+# Em seguida, usamos um loop for para percorrer cada nome na lista nomes. 
+# Dentro do loop, verificamos se o nome já está no dicionário utilizando um if. 
+# Se o nome já estiver no dicionário, incrementamos o valor correspondente à chave em 1. Caso contrário, adicionamos uma nova entrada ao dicionário com o valor 1.
+# Por fim, imprimimos o dicionário resultante utilizando a função print(). O dicionário terá como chave os nomes e como valor o número de vezes que cada nome apareceu na lista.
+
+
+# 3. Escreva um programa que leia uma lista de números inteiros e remova todos os
+# valores duplicados. Em seguida, imprima a lista sem os valores duplicados.
+
+numeros = input("Digite uma lista de números inteiros separados por espaço: ")
+numeros = numeros.split() # converte a entrada em uma lista de strings
+numeros = [int(numero) for numero in numeros] # converte cada elemento da lista para um número inteiro
+
+numeros_sem_duplicatas = list(set(numeros)) # remove os valores duplicados da lista
+
+print("Lista sem valores duplicados:", numeros_sem_duplicatas)
+
+# Neste programa, a função input() é utilizada para solicitar ao usuário que digite uma lista de números inteiros separados por espaço. 
+# Em seguida, a função split() é utilizada para converter a entrada em uma lista de strings, separando os elementos pelos espaços em branco. 
+# A lista resultante é armazenada na variável numeros.
+# Para remover os valores duplicados da lista, utilizamos a função set(), que remove automaticamente as duplicatas, e em seguida, 
+# convertemos o resultado novamente em uma lista utilizando a função list().
+# Por fim, usamos a função print() para imprimir a lista sem os valores duplicados.
