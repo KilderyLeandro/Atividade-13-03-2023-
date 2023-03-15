@@ -1,0 +1,68 @@
+# Estruturas de Repetição:
+
+# 1. Escreva um programa que imprima todos os números ímpares entre 1 e 50.
+
+for i in range(1, 51, 2):
+    print(i)
+
+# Neste programa, utilizamos um laço for que itera sobre uma sequência de números ímpares de 1 a 50. 
+# Para isso, utilizamos a função range() com os seguintes argumentos: o primeiro número da sequência (1),
+# o último número da sequência (51, pois ele é exclusivo), e o intervalo entre os números (2, para que a sequência contenha apenas números ímpares).
+# Dentro do laço for, utilizamos o comando print() para imprimir cada número ímpar na tela.
+
+
+# 2. Escreva um programa que leia uma lista de números inteiros e imprima a média
+# desses números.
+
+numeros = input("Digite uma lista de números inteiros separados por vírgula: ")
+lista_numeros = numeros.split(",")
+soma = 0
+for numero in lista_numeros:
+    soma += int(numero)
+media = soma / len(lista_numeros)
+print("A média dos números é:", media)
+
+
+# Neste programa, utilizamos a função input() para solicitar ao usuário que digite uma lista de números inteiros separados por vírgula. 
+# Em seguida, utilizamos o método split() para transformar essa lista em uma lista de strings contendo os números individuais.
+# Depois, utilizamos um laço for para iterar sobre cada número da lista. Dentro do laço, utilizamos o operador += para adicionar o valor de cada número à variável soma.
+# Por fim, dividimos a soma pelo número de elementos na lista (calculado com a função len()) para obter a média, e utilizamos o comando print() para exibir a média na tela.
+
+# 3. Escreva um programa que solicite ao usuário um número e imprima a tabuada desse
+# número até o valor 10.
+
+numero = int(input("Digite um número para ver sua tabuada: "))
+for i in range(1, 11):
+    resultado = numero * i
+    print(numero, "x", i, "=", resultado)
+
+
+# Neste programa, utilizamos a função input() para solicitar ao usuário que digite um número para ver sua tabuada.
+# Em seguida, utilizamos a função int() para converter a entrada em um número inteiro.
+# Depois, utilizamos um laço for que itera de 1 a 10 (inclusive) para imprimir cada linha da tabuada. Para cada valor de i no laço, 
+# multiplicamos o número digitado pelo valor de i para obter o resultado da multiplicação. Em seguida, utilizamos o comando print() para exibir a linha da tabuada correspondente na tela.
+
+
+# 4. Escreva um programa que solicite ao usuário um número e imprima todos os
+# números primos menores que esse número.
+
+num = int(input("Digite um número: "))
+primos = []
+for i in range(2, num):
+    eh_primo = True
+    for j in range(2, i):
+        if i % j == 0:
+            eh_primo = False
+            break
+    if eh_primo:
+        primos.append(i)
+print("Números primos menores que", num, ":", primos)
+
+
+# Neste programa, utilizamos a função input() para solicitar ao usuário que digite um número. Em seguida, utilizamos a função int() para converter a entrada em um número inteiro.
+
+# Depois, utilizamos um laço for que itera de 2 até o número digitado pelo usuário (exclusivo) para verificar se cada número é primo.
+# Para cada valor de i no laço, verificamos se ele é primo testando se é divisível por algum número entre 2 e i (exclusivo).
+# Se encontrarmos algum divisor, definimos a variável eh_primo como False e interrompemos a busca pelos divisores utilizando o comando break.
+# Se a variável eh_primo permanecer como True após a busca pelos divisores, sabemos que o número é primo e o adicionamos a uma lista primos utilizando o método append().
+# Por fim, utilizamos o comando print() para exibir a lista primos contendo todos os números primos menores que o número digitado pelo usuário.
