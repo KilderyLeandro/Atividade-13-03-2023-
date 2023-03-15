@@ -1,0 +1,43 @@
+# Tipos de Dados:
+
+
+# 1. Escreva um programa que solicite ao usuário um número inteiro e imprima o dobro
+# desse número.
+
+numero = int(input("Digite um número inteiro: "))
+dobro = numero * 2
+print("O dobro de", numero, "é", dobro)
+
+
+# Neste programa, a função input() é utilizada para solicitar ao usuário que digite um número inteiro.
+# O valor é então convertido para um inteiro utilizando a função int(). 
+# O dobro do número é calculado multiplicando-se o valor de entrada por 2 e armazenado na variável dobro.
+# Por fim, a função print() é utilizada para imprimir a mensagem com o valor de entrada e o dobro calculado.
+
+
+# 2. Escreva um programa que solicite ao usuário o raio de um círculo e calcule a área
+# desse círculo.
+
+raio = float(input("Digite o raio do círculo: "))
+pi = 3.14159
+area = pi * (raio ** 2)
+print("A área do círculo é:", area)
+
+# Neste programa, a função input() é utilizada para solicitar ao usuário que digite o raio do círculo. 
+# O valor é então convertido para um número de ponto flutuante utilizando a função float(). 
+# O valor de π (pi) é definido como 3.14159 e armazenado na variável pi. A área do círculo é calculada utilizando 
+# a fórmula A = π * r² e armazenada na variável area. 
+# Por fim, a função print() é utilizada para imprimir a mensagem com o valor da área calculada.
+
+# 3. Escreva um programa que solicite ao usuário seu nome e idade e imprima uma
+# mensagem personalizada com essas informações
+
+nome = input("Digite seu nome: ")
+idade = input("Digite sua idade: ")
+mensagem = "Olá " + nome + ", você tem " + idade + " anos!"
+print(mensagem)
+
+# Neste programa, a função input() é utilizada para solicitar ao usuário que digite seu nome e idade. 
+# O valor digitado é armazenado nas variáveis nome e idade, respectivamente. 
+# A mensagem personalizada é criada concatenando as variáveis com as informações digitadas utilizando o operador +. 
+# Por fim, a mensagem é impressa na tela utilizando a função print().
